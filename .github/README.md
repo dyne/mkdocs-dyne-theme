@@ -20,19 +20,11 @@ Step by step notes on basic usage scenarios follow: initialize, update and deplo
 git clone https://github.com/dyne/mkdocs-dyne-theme
 ```
 
-3. run `./mkdocs-dyne-theme/.init` (please note the dot! **.**init)
+3. run `./mkdocs-dyne-theme/.init` (please note the dot! .init)
 
 4. edit the configuration file `mkdocs.yml` with the right project settings
 
-5. edit the contents in `docs/index.md` or symlink to README.md
-
-### Update the theme
-
-Run `./mkdocs-dyne-theme/.update` (please note the dot! **.**update) to actualize the theme to its latest version. 
-
-Commit the changes to your project.
-
-Keep in mind that this theme is not a submodule of your project, it is copied inside it.
+5. edit the contents in your project's root inside `README.md`
 
 ### Preview the webpage
 
@@ -40,11 +32,19 @@ Run `./mkdocs-dyne-theme/.preview` and open http://localhost:8000
 
 ### Deploy the webpage
 
-Run `./mkdocs-dyne-theme/.deploy` (please note the dot! **.**deploy) to create a branch `gh-pages` and upload the page.
+Run `./mkdocs-dyne-theme/.deploy` (please note the dot! .deploy) to create a branch `gh-pages` and upload the page.
 
 Go to https://dyne.github.io/project-name to see it.
 
 Contact a sysadmin to setup project-name.dyne.org.
+
+### Update the theme
+
+Run `./mkdocs-dyne-theme/.update` (please note the dot! .update) to actualize the theme to its latest version.
+
+Commit the changes to your project.
+
+Keep in mind that this theme is not a submodule of your project, it is copied inside it.
 
 
 
@@ -87,9 +87,9 @@ theme:
   name: null
   custom_dir: 'mkdocs-dyne-theme/'
 ```
- 
+
 ## Acknowledgement
- 
+
 This plugin is licensed AGPLv3.
 
 It is maintained by @jaromil and @puria
