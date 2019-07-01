@@ -6,7 +6,7 @@ theme=mkdocs-dyne-theme
 	print "Cannot find $theme"
 	return 1 }
 
-cp -rav $theme/skel/* .
+cp -rav $theme/.skel/* .
 
 [[ -d $theme/.git ]] && rm -rf $theme/.git
 
