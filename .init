@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+theme=mkdocs-dyne-theme
+
+[[ -d $theme ]] || {
+	print "Cannot find $theme"
+	return 1 }
+
+cp -rav $theme/skel/* .
+
+[[ -d $theme/.git ]] && rm -rf $theme/.git
+
+print "site/" > .gitignore

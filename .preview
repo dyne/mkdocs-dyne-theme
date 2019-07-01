@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+find_readme() {
+	[[ -r README.md ]] && print README.md
+	[[ -r ../README.md ]] && print ../README.md
+	[[ -r ../../README.md ]] && print ../../README.md
+}
+readme=`find_readme`
+print "README.md found in $readme"
+cp -v $readme docs/index.md
+mkdocs serve
+

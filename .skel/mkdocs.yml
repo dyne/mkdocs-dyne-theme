@@ -9,8 +9,8 @@ extra:
   links:
     releases: https://files.dyne.org/projectname
     docker: https://hub.docker.com/r/dyne/projectname
-	quickstart: https://github.com/decodeproject/projectname/wiki
-	forum: https://lists.dyne.org
+    quickstart: https://github.com/decodeproject/projectname/wiki
+    forum: https://lists.dyne.org
   drift_handle: s64nd7w43g53
   nav:
     subtitle: This is an awesome project
