@@ -20,7 +20,7 @@ Step by step notes on basic usage scenarios follow: initialize, update and deplo
 git clone https://github.com/dyne/mkdocs-dyne-theme
 ```
 
-3. run `./mkdocs-dyne-theme/init`
+3. run `./mkdocs-dyne-theme/.init` (please note the dot! **.**init)
 
 4. edit the configuration file `mkdocs.yml` with the right project settings
 
@@ -28,19 +28,24 @@ git clone https://github.com/dyne/mkdocs-dyne-theme
 
 ### Update the theme
 
-Run `./mkdocs-dyne-theme/update` to actualize the theme to its latest version.
+Run `./mkdocs-dyne-theme/.update` (please note the dot! **.**update) to actualize the theme to its latest version. 
 
 Commit the changes to your project.
 
 Keep in mind that this theme is not a submodule of your project, it is copied inside it.
 
+### Preview the webpage
+
+Run `./mkdocs-dyne-theme/.preview` and open http://localhost:8000
+
 ### Deploy the webpage
 
-Run `./mkdocs-dyne-theme/deploy` to create a branch `gh-pages` and upload the page.
+Run `./mkdocs-dyne-theme/.deploy` (please note the dot! **.**deploy) to create a branch `gh-pages` and upload the page.
 
 Go to https://dyne.github.io/project-name to see it.
 
 Contact a sysadmin to setup project-name.dyne.org.
+
 
 
 
@@ -55,6 +60,19 @@ site_author: Jaromil
 site_description: RedRoom is powered by the Zenroom crypto VM to bring easy to use yet advanced cryptographic functionalities for Redis.
 copyright: Copyright (C) 2019 by the <a href="https://dyne.org">Dyne.org foundation</a>. The source code is licensed <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.
 
+extra:
+  links:
+    releases: https://files.dyne.org/redroom
+    docker: https://hub.docker.com/r/dyne/redroom
+	quickstart: https://github.com/decodeproject/redroom/wiki
+	forum: https://lists.dyne.org
+  drift_handle: s64nd7w43g53
+  nav:
+    subtitle: Redis powered by Zenroom
+    logo: null # /img/redroom-trans.png
+    og_image_large: /img/redroom-trans.png
+
+
 plugins: []
 
 extra_css:
@@ -68,18 +86,6 @@ markdown_extensions:
 theme:
   name: null
   custom_dir: 'mkdocs-dyne-theme/'
-
-extra:
-  links:
-    releases: https://files.dyne.org/redroom
-    docker: https://hub.docker.com/r/dyne/redroom
-	quickstart: https://github.com/decodeproject/redroom/wiki
-	forum: https://lists.dyne.org
-  drift_handle: s64nd7w43g53
-  nav:
-    subtitle: Redis powered by Zenroom
-    logo: null # /img/redroom-trans.png
-    og_image_large: /img/redroom-trans.png
 ```
  
 ## Acknowledgement

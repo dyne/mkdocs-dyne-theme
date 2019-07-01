@@ -6,8 +6,14 @@ command -v mkdocs || {
 
 theme=mkdocs-dyne-theme
 
-# download theme on first deploy
-if ! [[ -d $theme ]]; then $theme/update; fi
+find_readme() {
+	[[ -r README.md ]] && print README.md
+	[[ -r ../README.md ]] && print ../README.md
+	[[ -r ../../README.md ]] && print ../../README.md
+}
+readme=`find_readme`
+print "README.md found in $readme"
+cp -v $readme docs/index.md
 
 # check if theme is a symlink then solve target for deploy
 if [[ -L $theme && -d $theme ]]; then
