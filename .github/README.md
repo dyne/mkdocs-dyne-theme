@@ -6,13 +6,13 @@ This theme uses [Bulma](bulma.io) and provides basic styling for our projects.
 
 ## Usage
 
-Usage requires mkdocs (python) and zsh: `apt install mkdocs`.
+Usage requires mkdocs (python) and zsh: `apt install zsh mkdocs`.
 
 Step by step notes on basic usage scenarios follow: initialize, update and deploy.
 
 ### Initialize
 
-1. make a `web` directory in your project and enter it
+1. make a `website` directory in your project and enter it
 
 2. clone this repo
 
@@ -24,7 +24,11 @@ git clone https://github.com/dyne/mkdocs-dyne-theme
 
 4. edit the configuration file `mkdocs.yml` with the right project settings
 
-5. edit the contents in your project's root inside `README.md`
+5. edit the contents in `docs/README.md`
+
+6. link the README in the project's root, i.e: `ln -s website/docs/README.md .`
+
+7. commit and push the changes to your project
 
 ### Preview the webpage
 
@@ -36,17 +40,19 @@ Run `./mkdocs-dyne-theme/.deploy` (please note the dot! .deploy) to create a bra
 
 Go to https://dyne.github.io/project-name to see it.
 
-Contact a sysadmin to setup project-name.dyne.org.
+#### Setup project-name.dyne.org
+
+Contact a sysadmin to setup project-name.dyne.org, then place the domain name inside `website/docs/CNAME` i.e: `echo project-name.dyne.org > website/docs/CNAME`.
+
+Commit and push the new CNAME file to your project.
 
 ### Update the theme
 
 Run `./mkdocs-dyne-theme/.update` (please note the dot! .update) to actualize the theme to its latest version.
 
-Commit the changes to your project.
+Commit and push the changes to your project.
 
 Keep in mind that this theme is not a submodule of your project, it is copied inside it.
-
-
 
 
 ## Configuration
@@ -92,4 +98,4 @@ theme:
 
 This plugin is licensed AGPLv3.
 
-It is maintained by @jaromil and @puria
+It is maintained by Jaromil and Puria
