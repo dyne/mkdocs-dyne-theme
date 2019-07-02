@@ -6,6 +6,10 @@ theme=mkdocs-dyne-theme
 	print "Cannot find $theme"
 	return 1 }
 
+[[ -r mkdocs.yml ]] && {
+	print "Already initialised, not overwriting."
+	return 1 }
+
 cp -rav $theme/.skel/* .
 
 [[ -d $theme/.git ]] && rm -rf $theme/.git
