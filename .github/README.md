@@ -4,6 +4,11 @@ For information about the base system see https://mkdocs.org
 
 This theme uses [Bulma](bulma.io) and provides basic styling for our projects.
 
+Example websites:
+- https://redroom.dyne.org
+- https://zentooth.dyne.org
+
+
 ## Usage
 
 Usage requires mkdocs (python) and zsh: `apt install zsh mkdocs`.
@@ -67,6 +72,7 @@ site_description: RedRoom is powered by the Zenroom crypto VM to bring easy to u
 copyright: Copyright (C) 2019 by the <a href="https://dyne.org">Dyne.org foundation</a>. The source code is licensed <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a>.
 
 extra:
+  basename: redroom
   links:
     releases: https://files.dyne.org/redroom
     docker: https://hub.docker.com/r/dyne/redroom
