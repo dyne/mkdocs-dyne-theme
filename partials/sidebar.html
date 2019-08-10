@@ -26,11 +26,14 @@
 
     <h1 class="menu-label">
         <span class="mdi mdi-format-list-numbered has-text-primary"></span> Table of Contents</h1>
-	{% for toc_item in page.toc %}
-    {% if toc_item.children %}
     <ul class="menu-list">
-        {% include 'partials/sidebar-item.html' %}
+        {% for toc_item in page.toc %}
+        <li>
+            <a href="{{ toc_item.url }}">{{ toc_item.title }}</a>
+            {% if toc_item.children %}
+                {% include 'partials/sidebar-item.html' %}
+            {% endif %}
+        </li>
+        {% endfor %}
     </ul>
-    {% endif %}
-	{% endfor %}
 </aside>
