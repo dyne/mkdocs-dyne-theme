@@ -10,8 +10,7 @@
         <li><span class="mdi mdi-history"></span><a href="{{ config.extra.links.releases }}">Latest Release</a></li>
         {% endif %}
         {% if config.extra.links.docker %}
-        <li><span class="mdi mdi-docker"></span> Docker:<br/>
-			<a href="https://github.com/dyne/docker-dyne-software/tree/master/{{config.extra.basename}}"> {{ config.extra.links.docker }}</a></li>
+        <li><span class="mdi mdi-docker"></span><a href="{{ config.extra.links.docker }}">Docker</a></li>
         {% endif %}
         {% if config.extra.links.quickstart %}
         <li><span class="mdi mdi-school"></span><a href="{{ config.extra.links.quickstart }}">Quick Start Guide</a></li>
