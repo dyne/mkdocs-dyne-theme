@@ -55,6 +55,7 @@
 			</div>
 		</section>
 		{% include 'partials/footer.html' %}
-		{% if config.extra.drift_handle %} {% include 'partials/drift.html' %} {% endif %}
+		{% if config.extra.drift_handle %} {% include 'partials/drift.html' %}      {% endif %}
+		{% if config.extra.ganalytics %}   {% include 'partials/ganalytics.html' %} {% endif %}
 	</body>
 </html>
